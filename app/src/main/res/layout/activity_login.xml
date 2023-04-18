@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#9EC0C5"
+        android:layout_height="match_parent"
+        tools:context=".Activity.SignActivity">
+        <RelativeLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/reletivelayout"
+            android:layout_height="wrap_content"
+            tools:context=".Activity.MainActivity"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#1982DF">
+                <RelativeLayout
+                    android:layout_width="110dp"
+
+                    android:layout_height="wrap_content">
+              <!--      <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spleshlogin">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>-->
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#F40802"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/bungee"
+                        android:text="Login Here.."
+                        />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </RelativeLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+
+
+            android:id="@+id/edit_email"
+            app:counterEnabled="true"
+            app:errorEnabled="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="90dp"
+            android:hint="E-mail"
+
+            app:hintTextColor="@color/black"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+
+
+            android:id="@+id/edit_password"
+            app:counterEnabled="true"
+            app:errorEnabled="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_email"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+
+            app:hintTextColor="@color/black"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+
+                android:maxLength="10"
+
+                android:inputType="textPassword"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btn_sing_login"
+            android:layout_width="186dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+
+            android:text="Login"
+            android:textStyle="bold"
+            android:backgroundTint="#54DF0A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_password"
+            app:layout_constraintVertical_bias="0.111"></androidx.appcompat.widget.AppCompatButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:text="Skip"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toTopOf="@id/edit_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:id="@+id/text_text"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Already have an account"
+            app:layout_constraintEnd_toEndOf="@id/btn_sing_login"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sing_login"></androidx.appcompat.widget.AppCompatCheckedTextView>
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:id="@+id/text_signup"
+            android:onClick="SignUp"
+
+            android:textStyle="bold"
+            android:textColor="#FA005B"
+            android:textSize="18dp"
+            app:layout_constraintTop_toBottomOf="@id/text_text"
+            app:layout_constraintStart_toEndOf="@id/text_text"
+            app:layout_constraintEnd_toEndOf="@id/btn_sing_login"></androidx.appcompat.widget.AppCompatCheckedTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
